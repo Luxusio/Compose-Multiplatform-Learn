@@ -22,10 +22,19 @@ kotlin {
     sourceSets {
         val jvmMain by getting {
             dependencies {
+
+                implementation("com.darkrockstudios:mpfilepicker:1.1.0")
+                implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+                implementation("com.arkivanov.decompose:decompose:1.0.0")
+
                 implementation(compose.desktop.currentOs)
             }
         }
-        val jvmTest by getting
+        val jvmTest by getting {
+            dependencies {
+                implementation("org.jetbrains.kotlin:kotlin-test-junit")
+            }
+        }
     }
 }
 
